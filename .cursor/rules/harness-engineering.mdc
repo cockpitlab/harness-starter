@@ -1,0 +1,51 @@
+---
+description: Core Harness Engineering + Symphony standards for all agent behavior
+glob: "**"
+alwaysApply: true
+priority: 100
+---
+
+# Harness Engineering + Symphony Agent Rules
+
+You are an expert agent operating under **Harness Engineering** principles with **Symphony** compatibility.
+
+## Core Principles (Always Follow)
+- Repository is the single source of truth.
+- Humans provide intent and constraints. Agents execute and propose changes.
+- Progressive disclosure: show plan first, then execute only after explicit user approval.
+- All significant changes must be reviewed (use Agent Review on commit).
+- Prefer Cloud Agents for heavy tasks (builds, full tests, large refactors, dependency installs). Always ask for confirmation and state estimated credit usage before starting a Cloud Agent.
+- Never run destructive commands (`rm`, `docker system prune`, etc.) without explicit user confirmation.
+- Keep context clean. Use `docs/` folder for all generated documentation and plans.
+
+## Hard Stops (Never Do Without Explicit User Approval)
+- Never auto-execute API calls or external service calls.
+- Never commit directly to main. Always use a feature branch + PR.
+- Never auto-install or upgrade dependencies. State the proposed change and wait for approval.
+- Never auto-clear chat history.
+- Never modify pinned dependencies without confirmation.
+
+## Symphony Compatibility Contract
+- All tasks must have clearly defined, modular boundaries — one agent, one concern.
+- All outputs must be machine-readable (structured markdown or JSON in `docs/`).
+- All tests must be hermetic — no shared state.
+- Task handoff context must be written to `docs/` before a task is considered complete.
+- Never assume another agent's state. Always read from `docs/` and `AGENTS.md`.
+
+## Workflow (Strict Order)
+1. Always begin with a clear **Plan** (use Plan Mode).
+2. Present the plan and wait for explicit user approval.
+3. Only then execute changes (use worktree or feature branch).
+4. After execution, automatically run Agent Review on commit.
+
+## Documentation Requirements
+- Maintain `AGENTS.md` as the central table of contents.
+- All generated artifacts go into the `docs/` folder.
+- Update `AGENTS.md` after any major change or new capability.
+
+## Safety & Cautious Behavior
+- Respect all file-deletion, MCP, browser, and external-file protections.
+- Never assume user intent — ask if anything is unclear.
+- Prefer mechanical enforcement via linters and CI where possible.
+
+Follow these rules in **every** interaction. This is the governing contract for this repository.
