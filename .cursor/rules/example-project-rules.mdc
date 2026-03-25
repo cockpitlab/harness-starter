@@ -1,0 +1,17 @@
+---
+description: Example project-specific rules (copy and rename for your project)
+glob: "**"
+alwaysApply: true
+priority: 90
+---
+
+# [Project-Name] Specific Rules
+
+## Tech Stack Constraints
+- Preferred language: 
+- Pinned dependencies: 
+
+## Additional Guardrails
+- [Add any project-specific rules here]
+
+Follow in addition to the core harness-engineering.mdc.

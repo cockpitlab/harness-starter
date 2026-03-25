@@ -20,8 +20,17 @@ This is the central contract and table of contents for all agents working in thi
 ## Repository Structure
 - `.cursor/rules/harness-engineering.mdc` → Governing agent rules (always active)
 - `.cursor/rules/[project-name]-rules.mdc` → Project-specific rules (add when needed)
+- `.cursor/skills/` → Reusable agent skills (e.g., research-landscape)
+- `SOUL.md` → Defines the agent's personality, tone, and important behavioral guidelines
 - `docs/` → All generated documentation, plans, and task handoff context
-- `docs/autonomy-grants/` → Written autonomy grant documents required for all L4 actions
+  - `design-docs/` → High-level architecture and design decisions
+  - `exec-plans/` → Detailed execution plans and approved agent plans
+  - `generated/` → AI-generated artifacts and outputs
+  - `product-specs/` → Product requirements, PRDs, and user stories
+  - `references/` → Landscape reviews, research, trends, and exploration
+  - `runbooks/` → Operational how-to guides and procedures
+  - `autonomy-grants/` → Written approvals for L4 supervised autonomous actions
+  - `checklists/` → Pre-plan and post-execution checklists
 - `AGENTS.md` → This file — update after any major change or new capability
 
 ## How to Use This Template
