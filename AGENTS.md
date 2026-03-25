@@ -16,6 +16,8 @@ This is the central contract and table of contents for all agents working in thi
 - Hermetic tests only — no shared state, no external dependencies in unit tests.
 - Write task handoff context to `docs/` before considering any task complete.
 - Read `docs/` and this file as ground truth. Never assume another agent's state.
+- Autonomy level inheritance is enforced — no agent can exceed the level granted by the upstream agent or human.
+- The central orchestrator respects progressive disclosure and Harness rules at all times.
 
 ## Repository Structure
 - `.cursor/rules/harness-engineering.mdc` → Governing agent rules (always active)
