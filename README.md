@@ -1,29 +1,32 @@
 # harness-starter
 
-Starter template for **Harness Engineering + Symphony** agentic development in Cursor.
+A governance template for safe, controlled agentic development in Cursor using **Harness Engineering + Symphony** principles.
 
-## What This Is
-A clean, reusable foundation that gives any new project a safe, controlled, and auditable agentic environment from day one.
+## Purpose
+This repository provides the rules, structure, and guardrails needed to prevent common Cursor/agent issues:
+- Agents running commands without approval
+- Direct commits to main
+- Uncontrolled dependency changes
+- Loss of human oversight
 
 ## What's Included
 - `.cursor/rules/harness-engineering.mdc` — Core governing rules (always active)
 - `AGENTS.md` — Central contract and table of contents
-- `autonomy-levels.md` — Autonomy framework (L0–L4)
+- `autonomy-levels.md` — L0–L4 autonomy framework
 - `docs/checklists/` — Pre-plan and post-execution checklists
-- `docs/autonomy-grants/` — For L4 supervised autonomy grants
-- `devops-rules.mdc` & `testing-rules.mdc` — Specialized rule extensions
-
-## How to Use This Template
-1. Click **"Use this template"** on GitHub to create a new repository
-2. Open the new repo in Cursor using the **Harness-Agentic** (or your custom) profile
-3. Add project-specific rules in `.cursor/rules/[project-name]-rules.mdc` when needed
-4. Update `AGENTS.md` with your project name, tech stack, and constraints
-5. Begin every session with a Plan — the harness rules are already enforced
+- `docs/autonomy-grants/` — For L4 supervised actions
+- Specialized rules (`devops-rules.mdc`, `testing-rules.mdc`)
+- Skills system (research-landscape)
 
 ## Core Principles
-- Progressive disclosure: Plan → Approve → Execute → Review
-- Repository is the single source of truth
-- Humans provide intent. Agents propose plans and wait for approval
-- Cloud Agents only for heavy tasks, with explicit approval
+- Humans provide intent. Agents propose plans and wait for explicit approval.
+- Progressive disclosure: Plan → Approve → Execute → Review.
+- Repository is the single source of truth.
+- Cloud Agents only for heavy tasks, with clear approval and risk disclosure.
+
+## How to Use
+1. Use this as a GitHub template for new projects, or apply the structure to an existing one.
+2. Open in Cursor with the **Harness-Agentic** (or your custom) profile.
+3. Start every session with a Plan — the rules are already enforced.
 
 Last updated: March 2026
