@@ -42,7 +42,7 @@ This is the central contract and table of contents for all agents working in thi
 1. Use this repo as a GitHub template or clone it to start a new project.
 2. Create `.cursor/rules/[project-name]-rules.mdc` for project-specific rules (stack, pinned dependencies, etc.).
 3. Update this `AGENTS.md` with the project name, tech stack, and any additional constraints.
-4. Open in Cursor with the Harness-Agentic profile active.
+4. Open in Cursor with the **Harness-Agentic** profile active.
 5. Begin every session with a Plan in Cursor — the harness rules are already active.
 
 ## Current Template Version
