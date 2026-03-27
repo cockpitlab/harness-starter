@@ -1,7 +1,7 @@
 #!/bin/sh
 # Harness Engineering Pre-Push Hook — Blocks accidental execution on main
 
-branch="main"
+branch="agent/2026-03-27-add-pre-push-hook"
 
 if [ "" = "main" ]; then
   if [ "" != "true" ]; then
