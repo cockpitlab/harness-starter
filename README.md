@@ -43,4 +43,4 @@ When you are ready, you can bring in the Symphony orchestrator on top of this fo
 3. Start every session with a Plan — the rules are already enforced.
 4. When ready for multi-agent work, integrate Symphony orchestration.
 
-Last updated: March 2026\n\n<!-- Harness test comment -->
+Last updated: March 2026
