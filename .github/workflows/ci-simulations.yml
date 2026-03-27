@@ -1,0 +1,18 @@
+name: ci / simulations
+
+on:
+  pull_request:
+    branches: [ main ]
+  push:
+    branches: [ main ]
+
+jobs:
+  simulation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Harness simulations placeholder
+        run: |
+          echo "✅ [Harness Engineering] simulations check passed (placeholder for now)"
+          # TODO: replace with real simulation runs later
