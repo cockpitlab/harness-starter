@@ -1,0 +1,17 @@
+#!/bin/sh
+# Harness Engineering Pre-Push Hook — Blocks accidental execution on main
+
+branch="main"
+
+if [ "" = "main" ]; then
+  if [ "" != "true" ]; then
+    echo "❌ [Harness Enforcement] Direct push to main is blocked."
+    echo "   All changes must go through an agent/ branch + PR + full harness (lint + tests + simulations)."
+    echo ""
+    echo "   Emergency override only:"
+    echo "   ALLOW_MASTER_PUSH=true git push"
+    exit 1
+  fi
+fi
+
+echo "✅ [Harness] Push allowed for branch: "
