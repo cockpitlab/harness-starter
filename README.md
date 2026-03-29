@@ -12,7 +12,7 @@ It establishes:
 ## What's Included
 - `.githooks/pre-push` — prevents direct pushes to `main`
 - `.github/workflows/` — CI harness (lint, tests, simulations)
-- `AGENTS.md` — strict mechanical contract for all agents
+- `AGENTS.md` — mechanical contract and central table of contents for the repo
 - `docs/rollback-playbook.md` — safe recovery procedures
 - `docs/` — documentation, plans, and task handoff context
 - `.cursor/rules/` and `.cursor/skills/` — specialized agent guidance
