@@ -3,44 +3,41 @@
 A governance template for safe, controlled **agentic development** using **Harness Engineering + Symphony** in Cursor.
 
 ## Purpose
-This template provides the rules, structure, and guardrails needed to build reliable multi-agent systems while maintaining strong human oversight.
+This template provides the mechanical rules, guardrails, and structure needed to build reliable multi-agent systems while maintaining strong human oversight.
 
-It combines:
-- **Harness Engineering** — the governing rules and safety layer (progressive disclosure, autonomy levels, checklists, cautious execution)
-- **Symphony readiness** — the foundation for multi-agent orchestration (modular tasks, clear handoff, shared ground truth)
+It establishes:
+- **Harness Engineering** — strict branch protection, PR gates, full harness validation (lint + tests + simulations), and safe rollback procedures.
+- **Symphony readiness** — a clean, machine-legible foundation for safe multi-agent orchestration.
 
 ## What's Included
-- `.cursor/rules/harness-engineering.mdc` — Core governing rules (always active)
-- `AGENTS.md` — Central contract and table of contents
-- `autonomy-levels.md` — L0–L4 autonomy framework with clear approval gates
-- `docs/checklists/` — Pre-plan and post-execution checklists
-- `docs/autonomy-grants/` — For L4 supervised autonomous actions
-- Specialized rules (`devops-rules.mdc`, `testing-rules.mdc`)
-- Skills system (research-landscape)
-- Hooks system (recommended hooks for automatic enforcement)
-- `docs/hooks.md` — Guide for configuring hooks
-- `docs/symphony-integration.md` — Guide for integrating Symphony orchestration
+- `.githooks/pre-push` — prevents direct pushes to `main`
+- `.github/workflows/` — CI harness (lint, tests, simulations)
+- `AGENTS.md` — strict mechanical contract for all agents
+- `docs/rollback-playbook.md` — safe recovery procedures
+- `docs/` — documentation, plans, and task handoff context
+- `.cursor/rules/` and `.cursor/skills/` — specialized agent guidance
+- `SOUL.md` — agent persona and behavioral boundaries
 
-## Core Principles (Harness Engineering)
-- Humans provide intent. Agents propose plans and wait for explicit approval.
-- Progressive disclosure: Plan → Approve → Execute → Review.
-- Repository is the single source of truth.
-- Cloud Agents only for heavy tasks, with clear approval and risk disclosure.
+## Core Harness Principles
+- `main` must always remain **clean, verified truth** (passing lint, tests, and simulations).
+- All changes go through `agent/YYYY-MM-DD-...` or `fix/YYYY-MM-DD-...` branches + PR + full harness validation.
+- Bad branches are deleted — never fixed in place.
+- Pre-push hook + GitHub branch protection + required reviews enforce the rules mechanically.
+- Progressive disclosure: Human intent → Agent proposal → Harness validation → Human approval.
 
 ## Symphony Readiness
-This template is structured to enable Symphony (multi-agent orchestration):
-- Modular task boundaries ("one agent, one concern")
-- Shared ground truth via `docs/` and `AGENTS.md`
-- Task handoff context written to `docs/`
-- Autonomy level inheritance between agents
-- Pre-plan and post-execution checklists enforced by Harness rules
+This repository is fully prepared for Symphony multi-agent orchestration:
+- Agents can propose changes safely on isolated branches.
+- Every proposal is independently validated by the full harness.
+- Clear mechanical handoff via `AGENTS.md`, `docs/`, and the rollback playbook.
 
-When you are ready, you can bring in the Symphony orchestrator on top of this foundation for coordinated multi-agent workflows.
+When ready, the Symphony orchestrator can be layered on top of this guarded foundation.
 
 ## How to Use
-1. Use this as a GitHub template for new projects, or apply the structure to an existing one.
-2. Open in Cursor with the **Harness-Agentic** (or your custom) profile.
-3. Start every session with a Plan — the rules are already enforced.
-4. When ready for multi-agent work, integrate Symphony orchestration.
+1. Use this repo as a GitHub template for new agentic projects.
+2. Open the project in Cursor.
+3. Always start by reading `SOUL.md` and `AGENTS.md`.
+4. All development happens via feature/fix branches + Pull Request + full harness.
+5. Follow the rollback playbook for any recovery needs.
 
 Last updated: March 2026
