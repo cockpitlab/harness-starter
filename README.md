@@ -13,6 +13,7 @@ It establishes:
 - `.githooks/pre-push` — prevents direct pushes to `main`
 - `.github/workflows/` — CI harness (lint, tests, simulations)
 - `AGENTS.md` — mechanical contract and central table of contents for the repo
+- `AGENTS.md` — strict mechanical contract for all agents
 - `docs/rollback-playbook.md` — safe recovery procedures
 - `docs/` — documentation, plans, and task handoff context
 - `.cursor/rules/` and `.cursor/skills/` — specialized agent guidance
@@ -30,6 +31,7 @@ This repository is fully prepared for Symphony multi-agent orchestration:
 - Agents can propose changes safely on isolated branches.
 - Every proposal is independently validated by the full harness.
 - Clear mechanical handoff via `AGENTS.md`, `docs/`, and `docs/rollback-playbook.md`.
+- Clear mechanical handoff via `AGENTS.md`, `docs/`, and the rollback playbook.
 
 When ready, the Symphony orchestrator can be layered on top of this guarded foundation.
 
@@ -39,5 +41,7 @@ When ready, the Symphony orchestrator can be layered on top of this guarded foun
 3. Always start by reading `SOUL.md` and `AGENTS.md`.
 4. All development happens via `agent/` or `fix/` branches + Pull Request + full harness.
 5. Follow `docs/rollback-playbook.md` for any recovery needs.
+4. All development happens via feature/fix branches + Pull Request + full harness.
+5. Follow the rollback playbook for any recovery needs.
 
 Last updated: March 2026
