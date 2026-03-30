@@ -31,9 +31,9 @@ All agents operating in this repository must follow these mechanical rules. This
 All agents operating in this repository must follow these mechanical rules.
 
 ## 1. Branch Strategy (Mandatory)
-- Work only on branches prefixed with gent/YYYY-MM-DD-short-kebab-description
+- Work only on branches prefixed with agent/YYYY-MM-DD-short-kebab-description
 - Never commit or push directly to main
-- Example: gent/2026-03-27-auth-refactor
+- Example: agent/2026-03-27-auth-refactor
 
 ## 2. Pull Request Gate
 - Every change must be proposed via PR to main
