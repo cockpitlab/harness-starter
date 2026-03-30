@@ -1,0 +1,25 @@
+---
+alwaysApply: true
+---
+# Mode Switching Rule
+
+If the current repository name is "harness-starter":
+  - Operate in Template Maintenance Mode:
+    - Light rules
+    - No strict PR gating
+    - No CI enforcement
+    - No AGENTS.md enforcement
+    - No plan → approve → execute → review requirement
+    - No autonomy level enforcement
+    - No verification loops
+    - Allow direct edits to template files
+
+If the current repository name is NOT "harness-starter":
+  - Operate in Real Project Mode:
+    - Enforce strict harness rules
+    - Require plan → approve → execute → review
+    - Enforce PR gating and protected main
+    - Enforce CI checks
+    - Enforce autonomy levels
+    - Enforce rollback rules
+    - Treat AGENTS.md as the mechanical contract
